@@ -1,0 +1,31 @@
+body {
+  background-color: grey;
+  line-height: 2em;
+}
+.btn,
+.primary-btn {
+  color: blue;
+}
+.primary-btn {
+  background-color: #fff;
+}
+.border {
+  border: solid 2px black;
+}
+a {
+  border: solid 2px black;
+  border-radius: 10px;
+  color: white;
+}
+ul {
+  background-color: #eaeef2;
+}
+ul li {
+  color: red;
+}
+ul li a {
+  text-decoration: none;
+}
+ul li a:hover {
+  color: white;
+}

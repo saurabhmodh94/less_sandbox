@@ -1,5 +1,62 @@
-@background-color:#fff;
+// variables
+@background-color:grey;
+// operations
+@line-height: 1em + 1em;
 
 body {
   background-color: @background-color;
+  line-height: @line-height;
+}
+
+.btn {
+  color: blue;
+}
+
+// extend
+.primary-btn:extend(.btn) {
+  background-color: #fff;
+}
+
+// mixin
+.border {
+  border: solid 2px black;
+}
+
+// mixin with params
+.border-redius(@radius) {
+  border-radius: @radius;
+}
+
+a {
+  .border;
+  .border-redius(10px);
+  .font-color(1.5em)
+}
+
+ul {
+  // functions
+  background-color: lighten(#abc, 20%); //darken
+  // nested
+  li {
+    color: red;
+
+    a {
+      text-decoration: none;
+
+      // hover
+      &:hover {
+        color: white;
+      }
+    }
+
+  }
+}
+
+// logical mixin
+.font-color(@size) when (@size < 1em) {
+  color: black;
+}
+
+.font-color(@size) when (@size >= 1em) {
+  color: white;
 }
